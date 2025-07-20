@@ -8,8 +8,11 @@ import theme from "./theme";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Next App Mantine Tailwind Template",
-  description: "Next App Mantine Tailwind Template",
+  title: "FIFA Tournament Creator",
+  description: "FIFA Tournament Creator",
+  icons:{
+    icon:'/icon.ico'
+  }
 };
 
 export default function RootLayout({
