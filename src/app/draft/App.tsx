@@ -283,6 +283,14 @@ export default function App(props){
                         }
                         </AnimatePresence>
                     </div>
+                    <div className="flex justify-center py-4">
+                        {CurrRound<=Rounds&&
+                        <Button  onClick={roundActivate}>Pick Players for round {CurrRound}</Button>
+                        }
+                        {CurrRound>Rounds&&
+                        <Button disabled onClick={roundActivate}>Rounds completed</Button>
+                        }
+                    </div>
                 </div>}
                 {(Picking)&&
                     <motion.div initial={{ opacity:0}} whileInView={{ opacity:1}} transition={{duration:0.4,ease:"easeInOut"}} className='flex py-[100px] items-center justify-center'>
@@ -290,14 +298,7 @@ export default function App(props){
                     </motion.div>
                 }
                 
-                <div className="flex justify-center py-4">
-                    {CurrRound<=Rounds&&
-                    <Button  onClick={roundActivate}>Pick Players for round {CurrRound}</Button>
-                    }
-                    {CurrRound>Rounds&&
-                    <Button disabled onClick={roundActivate}>Rounds completed</Button>
-                    }
-                </div>
+                
                 <motion.div initial={{
                     x:"-100%",
                     opacity:0
