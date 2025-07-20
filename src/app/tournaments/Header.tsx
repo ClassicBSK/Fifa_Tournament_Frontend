@@ -46,15 +46,15 @@ export default function Header(){
                 duration:0.4,
                 ease:"easeInOut"
             }}
-            className="py-[0.5%] grid grid-cols-3 bg-[#006992]/25 shadow-lg">
-            <div className='mr-auto pl-[3%] shrink-0 flex items-center'>
-                <Text onClick={()=>{location.href="/tournaments"}} className=' cursor-pointer text-xl font-semibold font-serif italic'>Go to tournaments</Text>
+            className="py-[0.5%] flex items-center justify-between bg-[#006992]/25 shadow-lg">
+            <div className='flex items-center max-w-[40%]'>
+                <Text onClick={()=>{location.href="/tournaments"}} className=' cursor-pointer text-xl font-semibold font-serif italic '>Go to tournaments</Text>
                
             </div>
-            <div className='pl-[0.5%] flex justify-center items-center'>
+            <div className='flex-1 flex justify-center items-center'>
                 <Text className='text-xl font-semibold font-serif italic'>FIFA Tournament Creator</Text>
             </div>
-            <div className="ml-auto pr-[1%]  shrink-0">
+            <div className="flex items-center">
                 <Menu shadow="md" width={200}>
                     <Menu.Target>
                         <Avatar className='cursor-pointer border-1 border-[#006992] shadow-lg' name={Username}  radius='lg' color='initials'></Avatar>   
